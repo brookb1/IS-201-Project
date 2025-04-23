@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Professional Website</title>
+    <!-- Link to Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Link to custom stylesheet -->
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">My Professional Website</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About Me</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#resume">Resume</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#hobby">Hobby Page</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#webApp">Web App</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- About Me Section -->
+    <section id="about" class="container mt-5">
+        <h1>About Me</h1>
+        <p>Welcome to my website! I am a student passionate about marketing.</p>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume" class="container mt-5">
+        <h2>My Resume</h2>
+        <p>Here is a brief overview of my education, work experience, and skills:</p>
+        <ul>
+            <li>Education: Bachelor's Degree in progress in Marketing</li>
+            <li>Work Experience: Student Recruiter at BYU Admissions</li>
+            <li>Skills: HTML, CSS, JavaScript, Python</li>
+        </ul>
+    </section>
+
+    <!-- Hobby Page Section (Scratch Page) -->
+    <section id="hobby" class="container mt-5">
+        <h2>Hobby Page</h2>
+        <p>This is a section about my hobby: Photography.</p>
+        <ul>
+            <li>Types of Photography I enjoy:
+                <ol>
+                    <li>Families</li>
+                    <li>Portrait</li>
+                    <li>Seniors</li>
+                    <li>Mission Photos</li>
+                </ol>
+            </li>
+        </ul>
+        <img src="https://www.photoion.co.uk/wp-content/uploads/2014/06/photography_courses_london_landscape_Lake_District.jpg" alt="Lake District Landscape" class="img-fluid">
+       
+        <p>Here's a video my office at BYU Admissions made:</p>
+        <div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/JTcSo_ypytA" 
+            frameborder="0" allowfullscreen></iframe>
+        </div>
+        
+                
+        <a href="#about" class="btn btn-primary mt-3">Back to About Me</a>
+    </section>
+
+    <!-- Web App Section (AI Web App) -->
+    <section id="webApp" class="container mt-5">
+        <h2>AI Web App: Joke Generator</h2>
+        <div id="jokeApp">
+            <button class="btn btn-success" onclick="generateJoke()">Generate Joke</button>
+            <p id="jokeText"></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white mt-5 p-3">
+        <p>&copy; 2025 My Professional Website. All rights reserved.</p>
+    </footer>
+
+    <!-- Link to Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- JavaScript for Joke Generator Web App -->
+    <script>
+        function generateJoke() {
+            const jokes = [
+                "Why don't skeletons fight each other? They don't have the guts.",
+                "What do you call fake spaghetti? An impasta!",
+                "Why don't scientists trust atoms? Because they make up everything."
+            ];
+            const randomJoke = jokes[Math.floor(Math.random() * jokes.length)];
+            document.getElementById("jokeText").innerHTML = randomJoke;
+        }
+    </script>
+</body>
+
+</html>
